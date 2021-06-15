@@ -1,0 +1,12 @@
+// ======================================
+//  Form
+// ======================================
+
+.form__label--hidden{
+display:none;
+}
+
+
+input[placeholder]{
+  font-weight:$font-weight--bold;
+}

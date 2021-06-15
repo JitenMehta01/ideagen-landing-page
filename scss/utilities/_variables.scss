@@ -1,0 +1,91 @@
+// ======================================
+//  Variables
+// ======================================
+
+@font-face {
+    font-family: 'Gilroy';
+    src:  url('../../../assets/fonts/gilroy/gilroy-regular/gilroy-regular-webfont.woff2') format('woff2'),
+          url('../../../assets/fonts/gilroy/gilroy-regular/gilroy-regular-webfont.woff') format('woff');
+  }
+
+// colors
+
+$white:#fff;
+
+$mainHeading:#212d38;
+$mainCopy:#465564;
+$italicHeading: #465564;
+$ideaGenblue:#1b838b;
+
+
+// ================================================================
+
+// buttons
+$ideaGenPink: #e30072;
+$ideaGenGrey: #f4f5f6;
+$ideaGenPinkhover:#c80063;
+$ideagenGreyhover:#dde0e3;
+
+
+// ================================================================
+
+// Grid systems
+
+$grid-col-12:#80e8d1;
+
+$grid-col-6:#3fabca;
+
+$grid-col-4:#7ee6fd;
+
+$grid-col-3:#deb2ee;
+
+$grid-col-5:#88d9a0;
+
+$grid-col-7:#ec9fa3;
+
+$grid-col-8:#fd9f85;
+
+$grid-buttons:(
+3: $grid-col-3,
+4: $grid-col-4,
+5: $grid-col-5,
+6: $grid-col-6,
+7: $grid-col-7,
+8: $grid-col-8,
+12: $grid-col-12
+
+);
+
+// Grid configeration Variables
+
+$g-col-width:     65px;
+$g-gutter-width:  20px;
+$g-col-count:     12;
+$g-cont-max-w:    1050px;
+
+// ==========================================================
+
+// Fonts
+$font-stack-primary:  'Gilroy',Arial,Helvetica,sans-serif;
+
+//Font-weights
+
+$font-weight--thin:        100;
+$font-weight--light:       300;
+$font-weight--meduim:      400;
+$font-weight--bold:        600;
+$font-weight--extra-bold:  800;
+$font-weight--ultra-bold:  900;
+
+// Font-size + line height
+
+$base-font--size: 20px;
+$base--line--height: 23px;
+
+// ==========================================================
+
+// breakpoints for nav
+
+$breakpoint-mobile:500px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop:992px;

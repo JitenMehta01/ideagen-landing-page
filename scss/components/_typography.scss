@@ -1,0 +1,25 @@
+// ======================================
+//  Typography
+// ======================================
+
+
+
+
+// creating space between the first paragtaph and the Typography heading
+
+.grid__col--12 > .card{
+  padding-bottom:75px;
+  @include mq ('tablet') {
+      padding-bottom:0;
+    }
+}
+
+// h1 styling
+
+.headline--primary{
+  @include h1{
+    margin:0;
+  }
+}
+
+

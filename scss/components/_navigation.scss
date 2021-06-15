@@ -1,0 +1,40 @@
+// ======================================
+//  navigation
+// ======================================
+
+
+
+// main header container styling
+.grid__row:first-child, .nav{
+  @include flexy ($disp:flex,$dir:column);
+    padding-top:2em;
+    padding-bottom:2em;
+}
+
+
+
+nav{
+  width:100%;
+}
+
+// li styling in nav
+.nav
+{
+  margin-top:1.5em;
+  list-style: none;
+  padding:0;
+  @include mq ('tablet'){
+  @include flexy ($dir:row, $just:space-around, $disp:flex);
+  }
+}
+
+
+
+// desktop nav
+
+.grid__row:first-child{
+  @include mq ('desktop'){
+    @include flexy ($dir:row, $just:space-between);
+    padding:4em;
+  }
+}

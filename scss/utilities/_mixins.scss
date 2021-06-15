@@ -1,0 +1,148 @@
+// ======================================
+//  Mixins
+// ======================================
+
+
+// buttons
+
+@mixin buttons(
+$btn-text-color:null,
+$btn-margin:null,
+$backgroundHover
+)
+
+{
+  display:block;
+  width:158px;
+  color:$btn-text-color;
+  font-size: 16px;
+  font-weight:$font-weight--bold;
+  border-radius:101px;
+  text-align: center;
+  text-decoration: none;
+  padding:12px 16px;
+  margin-bottom:$btn-margin;
+  border:none;
+  @content;
+  &:hover{
+    background-color:$backgroundHover;
+    }
+}
+
+// responsive flex container
+
+@mixin flexy (
+$disp:null,
+$dir:null,
+$wrap:null,
+$just:null,
+$alself:null)
+{
+display:$disp;
+flex-direction: $dir;
+flex-wrap: $wrap;
+justify-content: $just;
+align-self: $alself;
+}
+
+// images
+
+@mixin imagewrapper(
+$img-brdr:none,
+$img-padding:none,
+$img-width:100%
+){
+padding:30px;
+border-radius:12px;
+background: #fff;
+box-shadow: 0 20px 25px 0 rgb(0 79 88 / 10%), 0 -1px 6px 0 rgb(0 79 88 / 5%);
+img{
+  display:block;
+  margin:0 auto;
+  opacity: 1;
+}
+@content;
+}
+
+// h1 styling
+
+@mixin h1 {
+font-size: 4rem;
+line-height:45px;
+margin:0;
+@include mq ('desktop'){
+  font-size:6.2rem;
+  line-height:68px;
+}
+@content;
+}
+
+// h4 styling
+@mixin h2 {
+  color:$mainHeading;
+  font-size:3.3rem;
+  padding: 0 16px;
+  text-align: center;
+  position: relative;
+  line-height: 39px;
+  @include mq ('mobile'){
+    width:100%;
+  }
+  @include mq ('tablet'){
+    width:75%;
+  }
+  @include mq ('desktop'){
+    width:87.5%;
+  }
+  @content;
+}
+
+
+// acnhor links styling
+
+@mixin link(
+  $link-color:null
+) {
+  font-weight:$font-weight--meduim;
+  text-decoration: none;
+
+}
+
+
+
+// form
+
+@mixin form-input{
+  width:100%;
+  border-top:0;
+  border-left:0;
+  border-right:0;
+  padding: 10px 0;
+  margin-bottom:em(35px);
+}
+
+
+
+// media queries for navigation only
+
+@mixin mq ($breakpoint){
+
+  @if $breakpoint == 'mobile'{
+    @media (min-width:$breakpoint-mobile){
+      @content;
+  }
+ }
+
+ @else if $breakpoint == 'tablet'{
+  @media (min-width:$breakpoint-tablet){
+    @content;
+}
+}
+
+
+  @else if $breakpoint == 'desktop'{
+    @media (min-width:$breakpoint-desktop){
+      @content;
+    }
+  }
+}
