@@ -21,4 +21,19 @@ h1,h2, h3, h4{
   width:90%;
   margin: 0 auto;
 }
-//
+
+
+ main .grid__row:first-child{
+   height:100vh;
+   background-color: red;
+   @include mq ('mobile'){
+    padding-top:67px;
+  }
+  @include mq('tablet'){
+    padding-top:77px;
+
+  }
+  @include mq('desktop'){
+    padding-top:97px;
+  }
+ }

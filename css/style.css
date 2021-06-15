@@ -358,7 +358,7 @@ template {
   color: #fff;
   font-size: 1rem;
   line-height: 1.15;
-  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-family: "Gilroy-Medium", Arial, Helvetica, sans-serif;
   margin: auto;
 }
 
@@ -372,6 +372,26 @@ h1, h2, h3, h4 {
   max-width: 1600px;
   width: 90%;
   margin: 0 auto;
+}
+
+main .grid__row:first-child {
+  height: 100vh;
+  background-color: red;
+}
+@media (min-width: 500px) {
+  main .grid__row:first-child {
+    padding-top: 67px;
+  }
+}
+@media (min-width: 768px) {
+  main .grid__row:first-child {
+    padding-top: 77px;
+  }
+}
+@media (min-width: 992px) {
+  main .grid__row:first-child {
+    padding-top: 97px;
+  }
 }
 
 @media (min-width: 500px) {

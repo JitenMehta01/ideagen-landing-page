@@ -23,12 +23,19 @@
         </text>
       </symbol>
     </svg>
+
+        <!-- closeform -->
+        <svg xmlns="http://www.w3.org/2000/svg" style = 'display:none;'>
+          <symbol id = 'close_form' viewBox="0 0 329.269 329">
+            <path d="M194.8 164.77L323.013 36.555c8.343-8.34 8.343-21.825 0-30.164-8.34-8.34-21.825-8.34-30.164 0L164.633 134.605 36.422 6.391c-8.344-8.34-21.824-8.34-30.164 0-8.344 8.34-8.344 21.824 0 30.164l128.21 128.215L6.259 292.984c-8.344 8.34-8.344 21.825 0 30.164a21.266 21.266 0 0015.082 6.25c5.46 0 10.922-2.09 15.082-6.25l128.21-128.214 128.216 128.214a21.273 21.273 0 0015.082 6.25c5.46 0 10.922-2.09 15.082-6.25 8.343-8.34 8.343-21.824 0-30.164zm0 0"/>
+          </symbol>
+        </svg>
   
 
 
           
   <div class="grid__row nav-bar">
-    <div class = "content-container">
+    <header class = "content-container">
       <div class="grid__col--12 nav">
         <nav>
           <a class="link" href="/">
@@ -39,118 +46,110 @@
             <li>Testimonials</li>
           </ul>
         </nav>
-        <button class = "btn--pink">Enquie Now</button>
+        <button class = "btn--pink enquire">Enquie Now</button>
       </div>
-      <!-- <div class="grid__col--9">
-        <nav role="navigation">
-          <ul class="nav">
-            <li class="nav__item"><a href="#type">Typography</a></li>
-            <li class="nav__item"><a href="#buttons">Buttons</a></li>
-            <li class="nav__item"><a href="#forms">Form</a></li>
-            <li class="nav__item"><a href="#images">Images</a></li>
-            <li class="nav__item"><a href="#grid">Grid</a></li>
-          </ul>
-        </nav>
-      </div> -->
-    </div>  
+    </header>  
   </div>
 
-  <div class="grid__row">
-    <div class = "content-container">
+
+  <main>
+    <div class="grid__row">
+      <div class = "content-container">
+        <div class="grid__col--12">
+          <div class="card">
+            <p>This is what the navigation menu looks like when the screen is at 769px or higher. When the screen is less than 769px,
+              the menu will be displayed vertically.</p>
+          </div>
+        </div>
+      </div>  
+    </div>
+
+    <div class="grid__row">
+      <div class = "content-container">
+        <div class="grid__col--8">
+          <div class="card">
+            <h4 id="type" class="headline--secondary">Typography</h4>
+            <h1 class="headline--primary">Take a look at this amazing headline</h1>
+            <p>This is a typical paragraph for the UI Kit. <a href="#" class="link">Here is what a link might look like</a>. The
+              typical font family for this kit is Helvetica Neue. This kit is intended for clean and refreshing web layouts.
+              No jazz hands here, just the essentials to make dreams come true, with minimal clean web design. The kit comes
+              fully equipped with everything from full responsive media styling to buttons to form fields. <em>I enjoy using italics as well from time to time</em>.
+              Fell free to create the most amazing designs ever with this kit. I truly hope you enjoy not only the kit but this
+              amazing paragraph as well. :)</p>
+            <blockquote class="blockquote">You know what really gets me going? A really nice set of block quotes. That's right, block quotes that say, "Hey,
+              I'm an article you want to read and nurture."</blockquote>
+          </div>
+        </div>
+        <div class="grid__col--4">
+          <form class="form">
+            <legend id="forms" class="headline--secondary">Form Elements</legend>
+            <img class="img--avatar" src="images/avatar.png" alt="Avatar">
+            <label class="form__label--hidden" for="username">Username:</label>
+            <input class="form__input" type="text" id="username" placeholder="Username">
+            <label class="form__label--hidden" for="password">Password:</label>
+            <input class="form__input" type="password" id="password" placeholder="Password">
+            <button class="btn--default theme__colors" type="submit" value="Login">Login</button>
+          </form>
+        </div>
+      </div>  
+    </div>
+
+    <h4 id="images" class="headline--secondary">Images</h4>
+
+    <div class="grid__row">
+      <div class="grid__col--6">
+        <img class="img--frame" src="images/image.png" alt="sample image">
+      </div>
+      <div class="grid__col--6">
+        <img class="img--avatar" src="images/avatar.png" alt="Avatar">
+      </div>
+    </div>
+
+    <h4 id="buttons" class="headline--secondary">Buttons</h4>
+
+    <div class="grid__row">
       <div class="grid__col--12">
-        <div class="card">
-          <p>This is what the navigation menu looks like when the screen is at 769px or higher. When the screen is less than 769px,
-            the menu will be displayed vertically.</p>
-        </div>
+        <button class="btn--default theme__colors">default</button>
+        <button class="btn--success theme__colors">success</button>
+        <button class="btn--error theme__colors">error</button>
+        <button class="btn--warning theme__colors">warning</button>
+        <button class="btn--info theme__colors">info</button>
       </div>
-    </div>  
-  </div>
-
-  <div class="grid__row">
-    <div class = "content-container">
-      <div class="grid__col--8">
-        <div class="card">
-          <h4 id="type" class="headline--secondary">Typography</h4>
-          <h1 class="headline--primary">Take a look at this amazing headline</h1>
-          <p>This is a typical paragraph for the UI Kit. <a href="#" class="link">Here is what a link might look like</a>. The
-            typical font family for this kit is Helvetica Neue. This kit is intended for clean and refreshing web layouts.
-            No jazz hands here, just the essentials to make dreams come true, with minimal clean web design. The kit comes
-            fully equipped with everything from full responsive media styling to buttons to form fields. <em>I enjoy using italics as well from time to time</em>.
-            Fell free to create the most amazing designs ever with this kit. I truly hope you enjoy not only the kit but this
-            amazing paragraph as well. :)</p>
-          <blockquote class="blockquote">You know what really gets me going? A really nice set of block quotes. That's right, block quotes that say, "Hey,
-            I'm an article you want to read and nurture."</blockquote>
-        </div>
-      </div>
-      <div class="grid__col--4">
-        <form class="form">
-          <legend id="forms" class="headline--secondary">Form Elements</legend>
-          <img class="img--avatar" src="images/avatar.png" alt="Avatar">
-          <label class="form__label--hidden" for="username">Username:</label>
-          <input class="form__input" type="text" id="username" placeholder="Username">
-          <label class="form__label--hidden" for="password">Password:</label>
-          <input class="form__input" type="password" id="password" placeholder="Password">
-          <button class="btn--default theme__colors" type="submit" value="Login">Login</button>
-        </form>
-      </div>
-    </div>  
-  </div>
-
-  <h4 id="images" class="headline--secondary">Images</h4>
-
-  <div class="grid__row">
-    <div class="grid__col--6">
-      <img class="img--frame" src="images/image.png" alt="sample image">
     </div>
-    <div class="grid__col--6">
-      <img class="img--avatar" src="images/avatar.png" alt="Avatar">
+
+    <h4 id="grid" class="headline--secondary">Grid System</h4>
+
+    <div class="grid__row">
+      <div class="grid__col--12 theme__colors">.grid__col--12</div>
     </div>
-  </div>
-
-  <h4 id="buttons" class="headline--secondary">Buttons</h4>
-
-  <div class="grid__row">
-    <div class="grid__col--12">
-      <button class="btn--default theme__colors">default</button>
-      <button class="btn--success theme__colors">success</button>
-      <button class="btn--error theme__colors">error</button>
-      <button class="btn--warning theme__colors">warning</button>
-      <button class="btn--info theme__colors">info</button>
+    <div class="grid__row">
+      <div class="grid__col--6 theme__colors">.grid__col--6</div>
+      <div class="grid__col--6 theme__colors">.grid__col--6</div>
     </div>
-  </div>
-
-  <h4 id="grid" class="headline--secondary">Grid System</h4>
-
-  <div class="grid__row">
-    <div class="grid__col--12 theme__colors">.grid__col--12</div>
-  </div>
-  <div class="grid__row">
-    <div class="grid__col--6 theme__colors">.grid__col--6</div>
-    <div class="grid__col--6 theme__colors">.grid__col--6</div>
-  </div>
-  <div class="grid__row">
-    <div class="grid__col--4 theme__colors">.grid__col--4</div>
-    <div class="grid__col--4 theme__colors">.grid__col--4</div>
-    <div class="grid__col--4 theme__colors">.grid__col--4</div>
-  </div>
-  <div class="grid__row">
-    <div class="grid__col--3 theme__colors">.grid__col--3</div>
-    <div class="grid__col--3 theme__colors">.grid__col--3</div>
-    <div class="grid__col--3 theme__colors">.grid__col--3</div>
-    <div class="grid__col--3 theme__colors">.grid__col--3</div>
-  </div>
-  <div class="grid__row">
-    <div class="grid__col--5 theme__colors">.grid__col--5</div>
-    <div class="grid__col--7 theme__colors">.grid__col--7</div>
-  </div>
-  <div class="grid__row">
-    <div class="grid__col--8 theme__colors">.grid__col--8</div>
-    <div class="grid__col--4 theme__colors">.grid__col--4</div>
-  </div>
-  <div class="grid__row">
-    <div class="grid__col--7 theme__colors centered">.centered .grid__col--7</div>
-  </div>
-
+    <div class="grid__row">
+      <div class="grid__col--4 theme__colors">.grid__col--4</div>
+      <div class="grid__col--4 theme__colors">.grid__col--4</div>
+      <div class="grid__col--4 theme__colors">.grid__col--4</div>
+    </div>
+    <div class="grid__row">
+      <div class="grid__col--3 theme__colors">.grid__col--3</div>
+      <div class="grid__col--3 theme__colors">.grid__col--3</div>
+      <div class="grid__col--3 theme__colors">.grid__col--3</div>
+      <div class="grid__col--3 theme__colors">.grid__col--3</div>
+    </div>
+    <div class="grid__row">
+      <div class="grid__col--5 theme__colors">.grid__col--5</div>
+      <div class="grid__col--7 theme__colors">.grid__col--7</div>
+    </div>
+    <div class="grid__row">
+      <div class="grid__col--8 theme__colors">.grid__col--8</div>
+      <div class="grid__col--4 theme__colors">.grid__col--4</div>
+    </div>
+    <div class="grid__row">
+      <div class="grid__col--7 theme__colors centered">.centered .grid__col--7</div>
+    </div>
+  </main>
+  <script src = "js/script.js"></script>
 </body>
 
 </html>
