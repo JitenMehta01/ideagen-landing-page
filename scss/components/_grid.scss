@@ -7,7 +7,7 @@
 .grid__row{
   @include mq ('tablet') /** Media query mixin for tablet **/{
 
-    @include flexy ($dir:row, $just:space-around, $disp:flex); /** Flexbox mixin **/
+    @include flexy ($dir:row, $just:space-around); /** Flexbox mixin **/
 
     @for $i from 2 through $g-col-count { /** loops through each iteration of grid--col **/
       @if $i !=9{ // omits column 9
@@ -16,7 +16,6 @@
 
         .grid__col--#{$i} {
           width: percentage($target / $context);
-             @include flexy($disp:flex, $dir:row, $just:space-around);
       }
     }
     }

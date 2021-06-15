@@ -8,13 +8,17 @@
   line-height:($base--line--height/$base-font--size);
   font-family: $font-stack-primary;
   margin:auto;
-  width:90%;
-  max-width:1600px;
 }
 
 h1,h2, h3, h4{
   margin: 20px 0;
   font-weight:700;
   color:$mainHeading;
+}
+
+.content-container{
+  max-width:1600px;
+  width:90%;
+  margin: 0 auto;
 }
 //

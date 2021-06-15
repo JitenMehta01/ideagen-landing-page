@@ -4,10 +4,33 @@
 
 @font-face {
     font-family: 'Gilroy';
-    src:  url('../../../assets/fonts/gilroy/gilroy-regular/gilroy-regular-webfont.woff2') format('woff2'),
-          url('../../../assets/fonts/gilroy/gilroy-regular/gilroy-regular-webfont.woff') format('woff');
+    src:  url('../../gilroy/gilroy-bold/gilroy-bold-webfont.woff2') format('woff2'),
+          url('../../gilroy/gilroy-bold/gilroy-bold-webfont.woff') format('woff');
   }
 
+  @font-face {
+    font-family: 'Gilroy';
+    src:  url('../../gilroy/gilroy-bolditalic/gilroy-bolditalic-webfont.woff2') format('woff2'),
+          url('../../gilroy/gilroy-bolditalic/gilroy-bolditalic-webfont.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Gilroy';
+    src:  url('../../gilroy/gilroy-italic/gilroy-regularitalic-webfont.woff2') format('woff2'),
+          url('../../gilroy/gilroy-italic/gilroy-regularitalic-webfont.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Gilroy';
+    src:  url('../../gilroy/gilroy-medium/gilroy-medium-webfont.woff2') format('woff2'),
+          url('../../gilroy/gilroy-medium/gilroy-medium-webfont.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Gilroy';
+    src:  url('../../gilroy/gilroy-mediumitalic/gilroy-mediumitalic-webfont.woff2') format('woff2'),
+          url('../../gilroy/gilroy-mediumitalic/gilroy-mediumitalic-webfont.woff') format('woff');
+  }
 // colors
 
 $white:#fff;

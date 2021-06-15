@@ -1,6 +1,22 @@
 @font-face {
   font-family: "Gilroy";
-  src: url("../../../assets/fonts/gilroy/gilroy-regular/gilroy-regular-webfont.woff2") format("woff2"), url("../../../assets/fonts/gilroy/gilroy-regular/gilroy-regular-webfont.woff") format("woff");
+  src: url("../../gilroy/gilroy-bold/gilroy-bold-webfont.woff2") format("woff2"), url("../../gilroy/gilroy-bold/gilroy-bold-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../gilroy/gilroy-bolditalic/gilroy-bolditalic-webfont.woff2") format("woff2"), url("../../gilroy/gilroy-bolditalic/gilroy-bolditalic-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../gilroy/gilroy-italic/gilroy-regularitalic-webfont.woff2") format("woff2"), url("../../gilroy/gilroy-italic/gilroy-regularitalic-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../gilroy/gilroy-medium/gilroy-medium-webfont.woff2") format("woff2"), url("../../gilroy/gilroy-medium/gilroy-medium-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../gilroy/gilroy-mediumitalic/gilroy-mediumitalic-webfont.woff2") format("woff2"), url("../../gilroy/gilroy-mediumitalic/gilroy-mediumitalic-webfont.woff") format("woff");
 }
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -341,11 +357,9 @@ template {
 .container {
   color: #fff;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.15;
   font-family: "Gilroy", Arial, Helvetica, sans-serif;
   margin: auto;
-  width: 90%;
-  max-width: 1600px;
 }
 
 h1, h2, h3, h4 {
@@ -354,35 +368,80 @@ h1, h2, h3, h4 {
   color: #212d38;
 }
 
-.grid__row:first-child, .nav {
-  display: flex;
-  flex-direction: column;
-  padding-top: 2em;
-  padding-bottom: 2em;
+.content-container {
+  max-width: 1600px;
+  width: 90%;
+  margin: 0 auto;
 }
 
-nav {
-  width: 100%;
-}
-
-.nav {
-  margin-top: 1.5em;
-  list-style: none;
-  padding: 0;
+@media (min-width: 500px) {
+  .nav_logo {
+    width: 112px;
+    height: 60px;
+  }
 }
 @media (min-width: 768px) {
-  .nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  .nav_logo {
+    width: 146px;
+    height: 72px;
+  }
+}
+@media (min-width: 992px) {
+  .nav_logo {
+    width: 182px;
+    height: 92px;
   }
 }
 
-@media (min-width: 1024px) {
-  .grid__row:first-child {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 4em;
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.btn--pink {
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  display: block;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px 16px;
+  border: none;
+  background-color: #e30072;
+  margin-left: auto;
+  cursor: pointer;
+}
+@media (min-width: 992px) {
+  .btn--pink {
+    font-size: 20px;
+  }
+}
+
+.nav-bar {
+  width: 100%;
+  top: 0;
+  position: fixed;
+  background-color: #fff;
+  box-shadow: 0 10px 15px 0 rgba(0, 79, 88, 0.1), 0 -1px 6px 0 rgba(0, 79, 88, 0.05);
+}
+.nav-bar nav {
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .nav-bar nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    color: black;
+    width: 285px;
+  }
+  .nav-bar nav ul li:nth-of-type(2) {
+    margin-left: auto;
   }
 }
 
@@ -401,7 +460,7 @@ nav {
   margin: 0;
   margin: 0;
 }
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   .headline--primary {
     font-size: 6.2rem;
     line-height: 68px;
@@ -436,63 +495,33 @@ input[placeholder] {
   }
   .grid__row .grid__col--2 {
     width: 15%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
   }
   .grid__row .grid__col--3 {
     width: 23.5%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
   }
   .grid__row .grid__col--4 {
     width: 32%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
   }
   .grid__row .grid__col--5 {
     width: 40.5%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
   }
   .grid__row .grid__col--6 {
     width: 49%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
   }
   .grid__row .grid__col--7 {
     width: 57.5%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
   }
   .grid__row .grid__col--8 {
     width: 66%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
   }
   .grid__row .grid__col--10 {
     width: 83%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
   }
   .grid__row .grid__col--11 {
     width: 91.5%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
   }
   .grid__row .grid__col--12 {
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
   }
 }
 

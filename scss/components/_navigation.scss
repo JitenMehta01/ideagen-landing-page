@@ -4,37 +4,94 @@
 
 
 
-// main header container styling
-.grid__row:first-child, .nav{
-  @include flexy ($disp:flex,$dir:column);
-    padding-top:2em;
-    padding-bottom:2em;
-}
+// // main header container styling
+// .grid__row:first-child, .nav{
+//   @include flexy ($disp:flex,$dir:column);
+//     padding-top:2em;
+//     padding-bottom:2em;
+// }
 
 
 
-nav{
-  width:100%;
-}
+// nav{
+//   width:100%;
+// }
 
-// li styling in nav
-.nav
-{
-  margin-top:1.5em;
-  list-style: none;
-  padding:0;
-  @include mq ('tablet'){
-  @include flexy ($dir:row, $just:space-around, $disp:flex);
+// // li styling in nav
+// .nav
+// {
+//   margin-top:1.5em;
+//   list-style: none;
+//   padding:0;
+//   @include mq ('tablet'){
+//   @include flexy ($dir:row, $just:space-around, $disp:flex);
+//   }
+// }
+
+
+
+// // desktop nav
+
+// .grid__row:first-child{
+//   @include mq ('desktop'){
+//     @include flexy ($dir:row, $just:space-between);
+//     padding:4em;
+//   }
+// }
+
+
+//logo
+.nav_logo{
+  @include mq ('mobile'){
+    width:112px;
+    height: 60px;
+  }
+  @include mq('tablet'){
+    width:146px;
+    height: 72px;
+
+  }
+  @include mq('desktop'){
+    width:182px;
+    height: 92px; 
   }
 }
 
+.nav{
+  @include flexy($just:flex-start, $alitems:center);
+  margin: 0 auto;
+
+}
+
+.btn--pink{
+  @include buttons($backgroundColor:$ideaGenPink,$btn-text-color:$white);
+  margin-left:auto;
+  cursor: pointer;
+  @include mq('desktop'){
+    font-size:20px;
+  }
+} 
 
 
-// desktop nav
-
-.grid__row:first-child{
-  @include mq ('desktop'){
-    @include flexy ($dir:row, $just:space-between);
-    padding:4em;
+// takes the header out of parent body element to go full width
+.nav-bar{
+  width:100%;
+  top:0;
+  position: fixed;
+  background-color: $white;
+  box-shadow: 0 10px 15px 0 rgb(0 79 88 / 10%), 0 -1px 6px 0 rgb(0 79 88 / 5%);
+  & nav{
+    @include flexy($just:center);
+    @include mq ('tablet'){
+    & ul{
+      @include flexy($alitems:center);
+      list-style: none;
+      color:black;
+      width:285px;
+      & li:nth-of-type(2){
+        margin-left:auto;
+      }
+    }
+   }
   }
 }
