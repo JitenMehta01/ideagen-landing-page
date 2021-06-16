@@ -3,33 +3,21 @@
 // ======================================
 
 @font-face {
-    font-family: 'Gilroy';
-    src:  url('../../gilroy/gilroy-bold/gilroy-bold-webfont.woff2') format('woff2'),
-          url('../../gilroy/gilroy-bold/gilroy-bold-webfont.woff') format('woff');
+    font-family: 'Gilroy-bold';
+    src:  url('../../assets/gilroy/gilroy-bold/gilroy-bold-webfont.woff2') format('woff2'),
+          url('../../assets/gilroy/gilroy-bold/gilroy-bold-webfont.woff') format('woff');
   }
 
   @font-face {
-    font-family: 'Gilroy';
-    src:  url('../../gilroy/gilroy-bolditalic/gilroy-bolditalic-webfont.woff2') format('woff2'),
-          url('../../gilroy/gilroy-bolditalic/gilroy-bolditalic-webfont.woff') format('woff');
+    font-family: 'Gilroy-medium';
+    src:  url('../../assets/gilroy/gilroy-medium/gilroy-medium-webfont.woff2') format('woff2'),
+          url('../../assets/gilroy/gilroy-medium/gilroy-medium-webfont.woff') format('woff');
   }
 
   @font-face {
-    font-family: 'Gilroy';
-    src:  url('../../gilroy/gilroy-italic/gilroy-regularitalic-webfont.woff2') format('woff2'),
-          url('../../gilroy/gilroy-italic/gilroy-regularitalic-webfont.woff') format('woff');
-  }
-
-  @font-face {
-    font-family: 'Gilroy';
-    src:  url('../../gilroy/gilroy-medium/gilroy-medium-webfont.woff2') format('woff2'),
-          url('../../gilroy/gilroy-medium/gilroy-medium-webfont.woff') format('woff');
-  }
-
-  @font-face {
-    font-family: 'Gilroy';
-    src:  url('../../gilroy/gilroy-mediumitalic/gilroy-mediumitalic-webfont.woff2') format('woff2'),
-          url('../../gilroy/gilroy-mediumitalic/gilroy-mediumitalic-webfont.woff') format('woff');
+    font-family: 'Gilroy-regular';
+    src:  url('../../assets/gilroy/gilroy-regular/gilroy-regular-webfont.woff2') format('woff2'),
+          url('../../assets/gilroy/gilroy-regular/gilroy-regular-webfont.woff') format('woff');
   }
 // colors
 
@@ -39,6 +27,7 @@ $mainHeading:#212d38;
 $mainCopy:#465564;
 $italicHeading: #465564;
 $ideaGenblue:#1b838b;
+$grey-bg:#f4f5f6;
 
 
 // ================================================================
@@ -89,7 +78,11 @@ $g-cont-max-w:    1050px;
 // ==========================================================
 
 // Fonts
-$font-stack-primary:  'Gilroy-Medium',Arial,Helvetica,sans-serif;
+$font-stack-primary:  'Gilroy-regular',Arial,Helvetica,sans-serif;
+$font-stack-bold:  'Gilroy-bold',Arial,Helvetica,sans-serif;
+$font-stack-medium:  'Gilroy-medium',Arial,Helvetica,sans-serif;
+
+
 
 //Font-weights
 

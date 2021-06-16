@@ -60,7 +60,7 @@
             <li>Testimonials</li>
           </ul>
         </nav>
-        <button class = "btn--pink enquire">Enquire Now</button>
+        <button class = "btn--pink enquiry">Enquire Now</button>
       </div>
     </div>  
   </header>
@@ -68,20 +68,41 @@
 
   <main>
     <div class="grid__row">
-      <div class = "content-container">
-        <div class="grid__col--12">
-          <div class="card">
-            <p>This is what the navigation menu looks like when the screen is at 769px or higher. When the screen is less than 769px,
-              the menu will be displayed vertically.</p>
-              <form class = "test">
-                <input type="text">
-              </form>
+        <div class="grid__col--6">
+          <div class = "content-container">
+            <div class="card hero">
+              <div class = "hero-text">
+                <h1 class = "main-heading">Empowering auditors around the world</h1>
+                <h2>Tired of time-consuming audits managed in spreadsheets and inconsistent auditing methodology?</h2>
+                <p class = "para">With our audit management software, internal audit departments can work faster, improve audit strategy, reduce costs and enhance productivity.</p>
+                <p class = "para"><i><b>Plan with precision. Execute with ease. Report with confidence</b></i></p>
+              </div>
+              <div class = "form--btn">
+                <div class = "form_container hero-form-container">    
+                  <form href="/" method="post" novalidate>
+                    <fieldset id = 'hero-form'>         
+                        <input type="text" id="hero-enquiry" enquiry="user-fname" required>
+                    </fieldset> 
+                  </form>  
+                  <button class = "btn--pink enquiry">Enquire Now</button>
+                </div>  
+              </div>
+            </div>
           </div>
         </div>
-      </div>  
+
+        <div class="grid__col--6 img-hero">
+          <div class="card">
+            <div class = "image-container">
+              <img class="img" src = "./assets/images/pentana-logo-image.png">
+            </div>
+          </div>
+        </div>
+
+
     </div>
 
-    <div class="grid__row">
+    <div class="grid__row features">
       <div class = "content-container">
         <div class="grid__col--8">
           <div class="card">

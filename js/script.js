@@ -1,7 +1,6 @@
-const enquire = [...document.getElementsByClassName('enquire')];
+const enquire = [...document.getElementsByClassName('enquiry')];
 const body = document.querySelector('body');
 const main = document.querySelector('main');
-const test = document.querySelector('.test input');
 const countries = []; // will be filled via api
 
 
@@ -61,12 +60,16 @@ enquire.forEach(btn =>{
             document.querySelector('form select').innerHTML += `
             <option value="${country}">${country}</option>
             `
-        })
+        });
 
-        if(test.value.length > 0){
-            const forminput = formDiv.querySelector('.test2 input');
-            forminput.value = test.value;
-        }
+        const input = document.querySelector('#hero-enquiry');
+        const emailInput = document.querySelector('#mail');
+        
+        if(input.value !== ""){
+            emailInput.value = input.value
+        } 
+
+
     });
 
 });

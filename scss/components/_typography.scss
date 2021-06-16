@@ -1,25 +1,26 @@
 // ======================================
 //  Typography
 // ======================================
+// hero section
+.main-heading{
+  @include h1;
+} 
 
-
-
-
-// creating space between the first paragtaph and the Typography heading
-
-.grid__col--12 > .card{
-  padding-bottom:75px;
-  @include mq ('tablet') {
-      padding-bottom:0;
-    }
+.para{
+  @include p;
 }
 
-// h1 styling
-
-.headline--primary{
-  @include h1{
-    margin:0;
+.hero-text p:nth-of-type(2){
+  display:none;
+  @include mq('desktop'){
+    display:block;
   }
 }
-
+ 
+// for hero main heading only
+@media (min-width: 1092px) and (max-width: 1291px) {
+    .main-heading{
+      font-size:42px;
+    }
+} 
 

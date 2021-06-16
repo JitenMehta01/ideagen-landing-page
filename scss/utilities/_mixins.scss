@@ -52,12 +52,13 @@ align-items: $alitems;
 @mixin imagewrapper(
 $img-brdr:none,
 $img-padding:none,
-$img-width:100%
+$img-width:null
 ){
 padding:30px;
 border-radius:12px;
 background: #fff;
 box-shadow: 0 20px 25px 0 rgb(0 79 88 / 10%), 0 -1px 6px 0 rgb(0 79 88 / 5%);
+width:$img-width;
 img{
   display:block;
   margin:0 auto;
@@ -69,11 +70,10 @@ img{
 // h1 styling
 
 @mixin h1 {
-font-size: 4rem;
+font-size: 32px;
 line-height:45px;
-margin:0;
 @include mq ('desktop'){
-  font-size:6.2rem;
+  font-size:50px;
   line-height:68px;
 }
 @content;
@@ -110,17 +110,28 @@ margin:0;
 
 }
 
+@mixin p{
+  line-height: 26px;
+  margin:20px 0;
+  font-weight:400;
+  font-size:16px;
+  color:$mainCopy;
+  @include mq('tablet'){
+    font-size:20px;
+  }
+
+}
+
 
 
 // form
 
+
 @mixin form-input{
-  width:100%;
-  border-top:0;
-  border-left:0;
-  border-right:0;
-  padding: 10px 0;
-  margin-bottom:em(35px);
+    margin-bottom:15px;
+    border-radius: 8px;
+    border:2px solid #B6BBC1;
+    @content;
 }
 
 

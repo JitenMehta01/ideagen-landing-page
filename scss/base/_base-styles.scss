@@ -8,6 +8,7 @@
   line-height:($base--line--height/$base-font--size);
   font-family: $font-stack-primary;
   margin:auto;
+  font-weight:100;
 }
 
 h1,h2, h3, h4{
@@ -17,15 +18,17 @@ h1,h2, h3, h4{
 }
 
 .content-container{
-  max-width:1600px;
+  max-width:1600px; 
   width:90%;
   margin: 0 auto;
 }
 
-
+// hero
  main .grid__row:first-child{
-   height:100vh;
-   background-color: red;
+   height:initial;
+  padding:80px 0;
+   @include mq('tablet'){
+   }
    @include mq ('mobile'){
     padding-top:67px;
   }
@@ -35,5 +38,19 @@ h1,h2, h3, h4{
   }
   @include mq('desktop'){
     padding-top:97px;
+    height:100vh;
   }
  }
+
+ .hero{
+   padding: 25px 0;
+   @include mq('tablet'){
+    padding: 50px 0;
+   }
+ }
+
+ // Features
+ .features{
+   background-color:$grey-bg;
+ }
+
