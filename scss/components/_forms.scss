@@ -2,11 +2,60 @@
 //  Form
 // ======================================
 
-.form__label--hidden{
-display:none;
-}
-
-
-input[placeholder]{
-  font-weight:$font-weight--bold;
-}
+// form div
+.formdiv{
+  background-image: url('C:/Users/jiten/Desktop/ideagen/landing-page-build/images/svg/page-background-cubes.svg');
+  padding: 10px 0;
+  @include mq ('mobile'){
+    padding: 50px 0;
+  }
+    & > .content-container{
+      @include flexy($dir:column);
+      & .svg-container{
+        @include flexy($just:flex-end);
+        margin-bottom: 0;
+        @include mq ('mobile'){
+        margin-bottom:50px;
+        }
+        & .closeform{
+          width:25px;
+          @include mq('mobile'){
+            width:initial;
+          }
+        }
+      }
+      & .form_container{
+        @include flexy($just:center);
+        & form {
+          color:$mainCopy;
+          box-shadow: 0 20px 25px 0 rgb(0 79 88 / 10%), 0 -1px 6px 0 rgb(0 79 88 / 5%);
+          background-color: $white;
+          & fieldset{
+            @include flexy($dir:column);
+            margin-top:25px;
+            border: none;
+            & legend{
+              font-size:1.2rem;
+              margin-bottom:25px;
+            }
+          }
+          width:100%;
+          @include mq ('tablet'){
+            max-width:700px;
+          }
+          & .form_logos{
+            @include flexy($just:space-around);
+            & svg{
+              width:200px;
+              height:70px;
+            }
+          }
+        }  
+     }   
+    }
+    & .closeform{
+      height: 50px;
+      width:50px;
+      align-self: flex-end;
+    }
+} 

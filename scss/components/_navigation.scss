@@ -3,45 +3,10 @@
 // ======================================
 
 
-
-// // main header container styling
-// .grid__row:first-child, .nav{
-//   @include flexy ($disp:flex,$dir:column);
-//     padding-top:2em;
-//     padding-bottom:2em;
-// }
-
-
-
-// nav{
-//   width:100%;
-// }
-
-// // li styling in nav
-// .nav
-// {
-//   margin-top:1.5em;
-//   list-style: none;
-//   padding:0;
-//   @include mq ('tablet'){
-//   @include flexy ($dir:row, $just:space-around, $disp:flex);
-//   }
-// }
-
-
-
-// // desktop nav
-
-// .grid__row:first-child{
-//   @include mq ('desktop'){
-//     @include flexy ($dir:row, $just:space-between);
-//     padding:4em;
-//   }
-// }
-
-
 //logo
 .nav_logo{
+  width:100px;
+  height: 60px;
   @include mq ('mobile'){
     width:112px;
     height: 60px;
@@ -63,12 +28,13 @@
 
 }
 
+// enquire now button
 .btn--pink{
   @include buttons($backgroundColor:$ideaGenPink,$btn-text-color:$white);
   margin-left:auto;
   cursor: pointer;
   @include mq('desktop'){
-    font-size:20px;
+    font-size:20px; 
   }
 } 
 
@@ -82,16 +48,17 @@
   box-shadow: 0 10px 15px 0 rgb(0 79 88 / 10%), 0 -1px 6px 0 rgb(0 79 88 / 5%);
   & nav{
     @include flexy($just:center);
-    @include mq ('tablet'){
     & ul{
-      @include flexy($alitems:center);
-      list-style: none;
-      color:black;
-      width:285px;
-      & li:nth-of-type(2){
-        margin-left:auto;
-      }
+        display:none;
+        @include mq ('tablet'){
+        @include flexy($alitems:center);
+        list-style: none;
+        color:black;
+        width:285px;
+        & li:nth-of-type(2){
+          margin-left:auto;
+        }
+      }  
     }
-   }
   }
 }

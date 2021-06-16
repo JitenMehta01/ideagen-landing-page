@@ -394,6 +394,10 @@ main .grid__row:first-child {
   }
 }
 
+.nav_logo {
+  width: 100px;
+  height: 60px;
+}
 @media (min-width: 500px) {
   .nav_logo {
     width: 112px;
@@ -452,6 +456,9 @@ main .grid__row:first-child {
   display: flex;
   justify-content: center;
 }
+.nav-bar nav ul {
+  display: none;
+}
 @media (min-width: 768px) {
   .nav-bar nav ul {
     display: flex;
@@ -487,12 +494,74 @@ main .grid__row:first-child {
   }
 }
 
-.form__label--hidden {
-  display: none;
+.formdiv {
+  background-image: url("C:/Users/jiten/Desktop/ideagen/landing-page-build/images/svg/page-background-cubes.svg");
+  padding: 10px 0;
 }
-
-input[placeholder] {
-  font-weight: 600;
+@media (min-width: 500px) {
+  .formdiv {
+    padding: 50px 0;
+  }
+}
+.formdiv > .content-container {
+  display: flex;
+  flex-direction: column;
+}
+.formdiv > .content-container .svg-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0;
+}
+@media (min-width: 500px) {
+  .formdiv > .content-container .svg-container {
+    margin-bottom: 50px;
+  }
+}
+.formdiv > .content-container .svg-container .closeform {
+  width: 25px;
+}
+@media (min-width: 500px) {
+  .formdiv > .content-container .svg-container .closeform {
+    width: initial;
+  }
+}
+.formdiv > .content-container .form_container {
+  display: flex;
+  justify-content: center;
+}
+.formdiv > .content-container .form_container form {
+  color: #465564;
+  box-shadow: 0 20px 25px 0 rgba(0, 79, 88, 0.1), 0 -1px 6px 0 rgba(0, 79, 88, 0.05);
+  background-color: #fff;
+  width: 100%;
+}
+.formdiv > .content-container .form_container form fieldset {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  border: none;
+}
+.formdiv > .content-container .form_container form fieldset legend {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+@media (min-width: 768px) {
+  .formdiv > .content-container .form_container form {
+    max-width: 700px;
+  }
+}
+.formdiv > .content-container .form_container form .form_logos {
+  display: flex;
+  justify-content: space-around;
+}
+.formdiv > .content-container .form_container form .form_logos svg {
+  width: 200px;
+  height: 70px;
+}
+.formdiv .closeform {
+  height: 50px;
+  width: 50px;
+  align-self: flex-end;
 }
 
 @media (min-width: 768px) {
