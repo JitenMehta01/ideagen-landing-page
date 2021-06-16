@@ -31,31 +31,28 @@ enquire.forEach(btn =>{
                 <fieldset id = 'personal-details'>         
                     <legend>Leave your details and we will get back to you shortly</legend>
                     
-                    <label for="fname">First Name:(required)</label>
+                    <label for="fname"><b>First Name </b><i>(required)</i></label>
                     <input type="text" id="fname" fname="user-fname" required>
-                    <span class = 'name-tip tool-tip'>Please provide letters only</span>
 
-                    <label for="lname">Last Name:(required)</label>
+                    <label for="lname"><b>Last Name </b><i>(required)</i></label>
                     <input type="text" id="lname" lname="user-lname" required>
-                    <span class = 'name-tip tool-tip'>Please provide letters only</span>
 
-                    <label for="mail">Email:(required)</label>
+                    <label for="mail"><b>Email </b>(required)</label>
                     <input type="email" id="mail" name="user-email" required>
-                    <span class = 'email-tip tool-tip'>Please provide a valid email address</span>
                     
-                    <label for="company">Company</label>
+                    <label for="company"><b>Company </b></label>
                     <input type="text" id="company" name="user-company" required>
 
-                    <label for="jobtitle">Job Title</label>
+                    <label for="jobtitle"><b>Job Title </b></label>
                     <input type="text" id="jobtitle" name="user-jobtitle">
 
-                    <label for="phone">Phone Number</label>
+                    <label for="phone"><b>Phone Number </b></label>
                     <input type="text" id="phone" name="user-phonenumber">
 
-                    <label for="country">Country:</label>
+                    <label for="country"><b>Country </b></label>
                     <select id="country" name="user-country" autocomplete="off">  		          
                     </select>     
-                    <button type="submit">Register</button>
+                    <button class = "btn--pink" type="submit">Register</button>
                 </form>
             </div>    
         </div>`;
@@ -87,6 +84,7 @@ function createformDiv (element){
     formDiv.style.width = "100vw";
     formDiv.style.top = "0";
     formDiv.style.position = "absolute";
+    formDiv.style.overflow = "auto";
     main.appendChild(formDiv);
 
     return true

@@ -514,15 +514,15 @@ main .grid__row:first-child {
 }
 @media (min-width: 500px) {
   .formdiv > .content-container .svg-container {
-    margin-bottom: 50px;
+    margin-bottom: 0;
   }
 }
 .formdiv > .content-container .svg-container .closeform {
   width: 25px;
 }
-@media (min-width: 500px) {
+@media (min-width: 768px) {
   .formdiv > .content-container .svg-container .closeform {
-    width: initial;
+    width: 35px;
   }
 }
 .formdiv > .content-container .form_container {
@@ -536,10 +536,34 @@ main .grid__row:first-child {
   width: 100%;
 }
 .formdiv > .content-container .form_container form fieldset {
+  min-width: 90%;
   display: flex;
   flex-direction: column;
   margin-top: 25px;
   border: none;
+}
+.formdiv > .content-container .form_container form fieldset label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.formdiv > .content-container .form_container form fieldset input,
+.formdiv > .content-container .form_container form fieldset select {
+  margin-bottom: 15px;
+  border-radius: 8px;
+  padding: 12px;
+  border: 2px solid #B6BBC1;
+}
+.formdiv > .content-container .form_container form fieldset input:hover {
+  border-color: #76D7E0;
+}
+.formdiv > .content-container .form_container form fieldset input:focus {
+  border-color: #1b838b;
+  outline: none;
+}
+@media (min-width: 500px) {
+  .formdiv > .content-container .form_container form fieldset {
+    min-width: none;
+  }
 }
 .formdiv > .content-container .form_container form fieldset legend {
   font-size: 1.2rem;
@@ -548,6 +572,7 @@ main .grid__row:first-child {
 @media (min-width: 768px) {
   .formdiv > .content-container .form_container form {
     max-width: 700px;
+    width: 500px;
   }
 }
 .formdiv > .content-container .form_container form .form_logos {
@@ -557,6 +582,9 @@ main .grid__row:first-child {
 .formdiv > .content-container .form_container form .form_logos svg {
   width: 200px;
   height: 70px;
+}
+.formdiv > .content-container .form_container form button {
+  width: 100%;
 }
 .formdiv .closeform {
   height: 50px;
