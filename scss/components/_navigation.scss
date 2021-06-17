@@ -41,6 +41,7 @@
 
 // takes the header out of parent body element to go full width
 .nav-bar{
+  z-index: 1000;
   width:100%;
   top:0;
   position: fixed;

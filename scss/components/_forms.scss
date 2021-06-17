@@ -4,10 +4,10 @@
 
 // form div for enquiry
 .formdiv{
-  background-image: url('C:/Users/jiten/Desktop/ideagen/landing-page-build/images/svg/page-background-cubes.svg');
-  padding: 10px 0;
+  background-image: url('C:/Users/jiten/Desktop/ideagen/landing-page-build/assets/images/svg/page-background-cubes.svg');
+  padding: 75px 0;
   @include mq ('mobile'){
-    padding: 50px 0;
+    padding: 120px 0;
   }
     & > .content-container{
       @include flexy($dir:column);

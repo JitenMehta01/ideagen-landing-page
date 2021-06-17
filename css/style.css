@@ -401,6 +401,73 @@ main .grid__row:first-child {
   background-color: #f4f5f6;
 }
 
+.testimonial-section {
+  border-bottom: 5px solid #dde0e3;
+  background: url("C:/Users/jiten/Desktop/ideagen/landing-page-build/assets/images/svg/page-background-cubes.svg");
+  padding: 75px 0;
+}
+.testimonial-section .testimonial-heading {
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .testimonial-section .testimonial-heading {
+    padding-bottom: 20px;
+  }
+}
+.testimonial-section .testimonial-heading ~ .testimonial {
+  padding: 20px 0;
+}
+@media (min-width: 768px) {
+  .testimonial-section .testimonial-heading ~ .testimonial {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+.testimonial-section .testimonial-heading ~ .testimonial .testimonial-cubes {
+  padding: 20px 0;
+  margin-top: 20px;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #212d38;
+}
+@media (min-width: 768px) {
+  .testimonial-section .testimonial-heading ~ .testimonial .testimonial-cubes {
+    width: 30%;
+    order: 1;
+    margin: initial;
+  }
+}
+@media (min-width: 768px) {
+  .testimonial-section .testimonial-heading ~ .testimonial .testimonial-cubes {
+    border-radius: 0 10px 10px 0;
+    padding: 0;
+  }
+}
+.testimonial-section .testimonial-heading ~ .testimonial .testimonial-cubes svg {
+  width: 60px;
+  height: 87px;
+}
+.testimonial-section .testimonial-heading ~ .testimonial .testimonial-text {
+  border-radius: 0 0 10px 10px;
+  padding: 16px;
+  background-color: #1b838b;
+}
+@media (min-width: 768px) {
+  .testimonial-section .testimonial-heading ~ .testimonial .testimonial-text {
+    width: 70%;
+    border-radius: 10px 0 0 10px;
+  }
+}
+.testimonial-section .testimonial-heading ~ .testimonial .testimonial-text .para {
+  color: #fff;
+}
+
 .nav_logo {
   width: 100px;
   height: 60px;
@@ -453,6 +520,7 @@ main .grid__row:first-child {
 }
 
 .nav-bar {
+  z-index: 1000;
   width: 100%;
   top: 0;
   position: fixed;
@@ -592,12 +660,12 @@ main .grid__row:first-child {
 }
 
 .formdiv {
-  background-image: url("C:/Users/jiten/Desktop/ideagen/landing-page-build/images/svg/page-background-cubes.svg");
-  padding: 10px 0;
+  background-image: url("C:/Users/jiten/Desktop/ideagen/landing-page-build/assets/images/svg/page-background-cubes.svg");
+  padding: 75px 0;
 }
 @media (min-width: 500px) {
   .formdiv {
-    padding: 50px 0;
+    padding: 120px 0;
   }
 }
 .formdiv > .content-container {

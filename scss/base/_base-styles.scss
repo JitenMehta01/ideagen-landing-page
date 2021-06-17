@@ -54,3 +54,63 @@ h1,h2, h3, h4{
    background-color:$grey-bg;
  }
 
+ // testimonial
+.testimonial-section{
+  border-bottom: 5px solid #dde0e3;
+  background: url('C:/Users/jiten/Desktop/ideagen/landing-page-build/assets/images/svg/page-background-cubes.svg');
+  padding:75px 0;
+  & .testimonial-heading{
+    @include flexy($just:center);
+    @include mq('tablet'){
+      padding-bottom:20px;
+    }
+    & ~ .testimonial{
+      padding:20px 0;
+      // row change start
+      @include mq('tablet'){
+        @include flexy($dir:row,$alicont:center);
+        width:70%;
+        margin:0 auto;
+
+      } // row change end
+
+      & .testimonial-cubes{
+        @include mq('tablet'){
+          width:30%;
+          order:1;
+          margin:initial;
+        }
+        padding:20px 0;
+        margin-top:20px; 
+        border-radius: 10px 10px 0 0;
+        @include mq('tablet'){
+          border-radius:0 10px 10px 0;
+          padding:0;
+        }
+        @include flexy($just:center, $alitems:center);
+        background-color:$mainHeading;
+        & svg{
+          width:60px;  
+          height: 87px;
+        }
+      }
+      .testimonial-text{
+        @include mq('tablet'){
+          width:70%;
+          border-radius: 10px 0 0 10px;
+          
+        }
+       border-radius:0 0 10px 10px;
+       padding:16px;
+       background-color: $ideaGenblue;
+       & .para{
+         color:$white;
+       }
+     }
+    }
+  }
+}
+
+
+
+

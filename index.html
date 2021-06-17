@@ -51,6 +51,14 @@
         <path fill="#fff" d="M235.472 392.08l-121.04-94.296 34.416-44.168 74.328 57.904 122.672-177.016 46.032 31.888z"/>
     </svg>
 
+    <!-- testimonial cubes -->
+    <svg xmlns="http://www.w3.org/2000/svg" style = 'display:none;' width="78.57" height="110">
+      <symbol id ="cubes-testimonial" viewBox="0 0 78.57 110">
+        <g transform="translate(0 0)"><path d="M0,62.85V78.5H1.21V63.57l25.19,15V110L52.49,94.281V62.86h-.01L26.4,47.14Z" fill="#fff"/>
+          <path d="M52.48,62.86h.01v-.01Z" fill="#fff"/><path d="M52.49,0,26.09,15.71V31.26H27.3l.01-14.821L52.49,31.43V62.85L78.57,47.14V15.71Z" fill="#fff"/>
+      </g>
+    </svg>
+
 
 
           
@@ -180,14 +188,23 @@
       </div>  
     </div>
 
-    <h4 id="images" class="headline--secondary">Images</h4>
 
-    <div class="grid__row">
-      <div class="grid__col--6">
-        <img class="img--frame" src="images/image.png" alt="sample image">
-      </div>
-      <div class="grid__col--6">
-        <img class="img--avatar" src="images/avatar.png" alt="Avatar">
+    <div class="grid__row testimonial-section">
+      <div class = "content-container">
+
+        <div class="grid__col--12 testimonial-heading">
+          <h2>What our customers say</h2>
+        </div>
+
+        <div class="grid__col--12 testimonial">
+          <div class = "testimonial-cubes">
+            <svg> <use xlink:href = '#cubes-testimonial'> </use>  </svg>
+          </div>
+          <div class = "testimonial-text">
+            <p class = "para">"Pentana has helped us professionalize our operation within global audit; bringing structured, disciplined but flexible way of working that we were look-ing for."</p>
+            <small><strong>Caroline Griffiths, Senior Manager of Global Audit Corporate & Professional Practice</strong> | Heineken</small>
+          </div>
+        </div>
       </div>
     </div>
 

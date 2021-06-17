@@ -37,7 +37,8 @@ $dir:null,
 $wrap:null,
 $just:null,
 $alself:null,
-$alitems:null)
+$alitems:null,
+$alicont:null)
 {
 display:flex;
 flex-direction: $dir;
@@ -45,6 +46,7 @@ flex-wrap: $wrap;
 justify-content: $just;
 align-self: $alself;
 align-items: $alitems;
+align-content: $alicont;
 }
  
 // images
