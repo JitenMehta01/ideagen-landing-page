@@ -7,6 +7,7 @@ const body = document.querySelector('body');
 const main = document.querySelector('main');
 const countries = []; // will be filled via api
 const navBtn = document.querySelector("header button");
+const logo = document.querySelector('.logo');
 
 /****
  * Form
@@ -82,6 +83,12 @@ if(navBtn.textContent === "Enquire Now"){
             });
         });
 }
+
+
+/**
+ * reloads page after logo is clicked
+ */
+
 
 
 /***
