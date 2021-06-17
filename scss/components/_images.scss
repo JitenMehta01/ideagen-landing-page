@@ -3,6 +3,11 @@
 }
 
 .image-container{
+    animation: fadein 2s;
+    position: relative;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
     @include imagewrapper($img-width:90%);
     @include mq ('desktop'){
         width:75%;
@@ -13,3 +18,47 @@
         margin: 0 auto;
     }
 } 
+
+
+// fade in animation for hero image
+@keyframes fadein {
+    from {
+        opacity:0;
+        left:60px;
+
+    }
+    to {
+        opacity:1;
+        left:0;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+        left:60px
+    }
+    to {
+        opacity:1;
+        left:0;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+        left:60px
+    }
+    to {
+        opacity:1;
+        left:0;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+        left:60px
+    }
+    to {
+        opacity: 1;
+        left:0;
+    }
+}

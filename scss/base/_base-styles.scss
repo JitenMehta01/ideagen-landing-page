@@ -21,17 +21,40 @@ h1,h2, h3, h4{
    font-size:20px;
  }
 
+ a{
+   text-decoration: none;
+   & :active{
+     color:$mainCopy
+   }
+   &:focus{
+     color:#22a3af;
+   }
+   &:visited{
+    color:$mainCopy;
+  }
+  &:hover{
+    color:#22a3af;
+  }
+ }
+
 .content-container{
   max-width:1600px; 
   width:90%;
   margin: 0 auto;
 }
 
+.heading{
+  @include heading;
+}
+
 // hero
  main .grid__row:first-child{
-   height:initial;
+   & .hero-text-container{
+     @include flexy($alitems:center);
+   }
   padding:80px 0;
    @include mq('tablet'){
+    height:100vh;
    }
    @include mq ('mobile'){
     padding-top:67px;
@@ -42,7 +65,6 @@ h1,h2, h3, h4{
   }
   @include mq('desktop'){
     padding-top:97px;
-    height:100vh;
   }
  }
 
@@ -82,7 +104,7 @@ h1,h2, h3, h4{
         @include mq('tablet'){
           width:30%;
           order:1;
-          margin:initial;
+          margin:inherit;
         }
         padding:20px 0;
         margin-top:20px; 
@@ -105,7 +127,10 @@ h1,h2, h3, h4{
           
         }
        border-radius:0 0 10px 10px;
-       padding:16px;
+       padding:20px;
+       @include mq('desktop'){
+         padding:50px 16px;
+       }
        background-color: $ideaGenblue;
        & .para{
          color:$white;

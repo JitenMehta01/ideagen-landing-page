@@ -50,12 +50,16 @@
   & nav{
     @include flexy($just:center);
     & ul{
-        display:none;
+      & li{
+        font-size:20px;
+        cursor: pointer;
+        }
+        display:none; 
         @include mq ('tablet'){
         @include flexy($alitems:center);
         list-style: none;
         color:black;
-        width:285px;
+        width:310px;
         & li:nth-of-type(2){
           margin-left:auto;
         }

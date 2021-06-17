@@ -85,6 +85,7 @@
       height: 50px;
       width:50px;
       align-self: flex-end;
+      cursor: pointer;
     }
 }
 
@@ -117,7 +118,7 @@
   @include mq ('mobile'){
     @include flexy($alitems:flex-start);
     & button{
-      margin-left:initial;
+      margin-left:inherit;
       border-radius: 0px 8px 8px 0;
     }
   }

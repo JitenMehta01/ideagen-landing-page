@@ -32,7 +32,9 @@
     @include mq('tablet'){
       margin-bottom:75px;
     }
-    @include flexy($just:center, $dir:column, $alitems:center);
+    display:block;
+    margin: 0 auto;
+    text-align: center;
   }
   .feature-container{
     @include flexy($alitems:center, $dir:column);
@@ -53,6 +55,7 @@
     }
     & p{
       font-size: 15px;
+      width:100%;
     }
   }
 } 

@@ -1,80 +1,92 @@
+
+/***
+ * Variables
+ */
 const enquire = [...document.getElementsByClassName('enquiry')];
 const body = document.querySelector('body');
 const main = document.querySelector('main');
 const countries = []; // will be filled via api
+const navBtn = document.querySelector("header button");
 
-
+/****
+ * Form
+ */
 
 // adds a form whenever a enquiery button is clicked
-enquire.forEach(btn =>{
-    btn.addEventListener('click', e =>{
-        createformDiv('div');
-        
-        const formDiv = main.querySelector('.formdiv');
-        formDiv.innerHTML = ` 
-        <div class = "content-container">
-            <div class = "svg-container">
-                <svg class = "closeform"> 
-                    <use xlink:href = "#close_form"> 
-                    </use>  
-                </svg>
-            </div>
-            <div class = "form_container">    
-                <form href="/" method="post" novalidate>
+if(navBtn.textContent === "Enquire Now"){
+    console.log(true);
+        enquire.forEach(btn =>{
+            btn.addEventListener('click',  function formhandler(){
+                createformDiv('div');
                 
-                <div class = "form_logos">
-                <svg> <use xlink:href = '#ideagen_logo'> </use>  </svg>
-                <svg> <use xlink:href = '#pentanaauditlogo'> </use>  </svg>
-                </div>
+                const formDiv = main.querySelector('.formdiv');
+                formDiv.innerHTML = ` 
+                <div class = "content-container">
+                    <div class = "form_container">    
+                        <form href="/" method="post" novalidate>
+                        
+                        <div class = "form_logos">
+                        <svg> <use xlink:href = '#ideagen_logo'> </use>  </svg>
+                        <svg> <use xlink:href = '#pentanaauditlogo'> </use>  </svg>
+                        </div>
 
-                <fieldset id = 'personal-details'>         
-                    <legend>Leave your details and we will get back to you shortly</legend>
-                    
-                    <label for="fname"><b>First Name </b><i>(required)</i></label>
-                    <input type="text" id="fname" fname="user-fname" required>
+                        <fieldset id = 'personal-details'>         
+                            <legend>Leave your details and we will get back to you shortly</legend>
+                            
+                            <label for="fname"><b>First Name </b><i>(required)</i></label>
+                            <input type="text" id="fname" fname="user-fname" required>
 
-                    <label for="lname"><b>Last Name </b><i>(required)</i></label>
-                    <input type="text" id="lname" lname="user-lname" required>
+                            <label for="lname"><b>Last Name </b><i>(required)</i></label>
+                            <input type="text" id="lname" lname="user-lname" required>
 
-                    <label for="mail"><b>Email </b>(required)</label>
-                    <input type="email" id="mail" name="user-email" required>
-                    
-                    <label for="company"><b>Company </b></label>
-                    <input type="text" id="company" name="user-company" required>
+                            <label for="mail"><b>Email </b>(required)</label>
+                            <input type="email" id="mail" name="user-email" required>
+                            
+                            <label for="company"><b>Company </b></label>
+                            <input type="text" id="company" name="user-company" required>
 
-                    <label for="jobtitle"><b>Job Title </b></label>
-                    <input type="text" id="jobtitle" name="user-jobtitle">
+                            <label for="jobtitle"><b>Job Title </b></label>
+                            <input type="text" id="jobtitle" name="user-jobtitle">
 
-                    <label for="phone"><b>Phone Number </b></label>
-                    <input type="text" id="phone" name="user-phonenumber">
+                            <label for="phone"><b>Phone Number </b></label>
+                            <input type="text" id="phone" name="user-phonenumber">
 
-                    <label for="country"><b>Country </b></label>
-                    <select id="country" name="user-country" autocomplete="off">  		          
-                    </select>     
-                    <button class = "btn--pink" type="submit">Register</button>
-                </form>
-            </div>    
-        </div>`;
+                            <label for="country"><b>Country </b></label>
+                            <select id="country" name="user-country" autocomplete="off">  		          
+                            </select>     
+                            <button class = "btn--pink" type="submit">Register</button>
+                        </form>
+                    </div>    
+                </div>`;
 
-        countries.forEach(country =>{
-            document.querySelector('form select').innerHTML += `
-            <option value="${country}">${country}</option>
-            `
+                // adds select options via api
+                countries.forEach(country =>{
+                    document.querySelector('form select').innerHTML += `
+                    <option value="${country}">${country}</option>
+                    `
+                });
+                const input = document.querySelector('#hero-enquiry');
+                const emailInput = document.querySelector('#mail');
+                // auto fills email input in form
+                if(input.value !== ""){
+                    emailInput.value = input.value
+                } 
+                // changes the nav btn so it closes form
+                if(main.lastElementChild.id === "formdiv"){
+                    this.removeEventListener('click', formhandler);
+                    navBtn.textContent = "Close form?";
+                    navBtn.addEventListener('click',e =>{
+                        location.reload();
+                })
+                } 
+            });
         });
-
-        const input = document.querySelector('#hero-enquiry');
-        const emailInput = document.querySelector('#mail');
-        
-        if(input.value !== ""){
-            emailInput.value = input.value
-        } 
+}
 
 
-    });
-
-});
-
-
+/***
+ * function to create a form Div
+ */
 // function that creates a formDiv
 function createformDiv (element){
     document.body.scrollTop = 0; // For Safari
@@ -82,6 +94,7 @@ function createformDiv (element){
     body.style.overflow = "hidden"
     const formDiv = document.createElement(element);
     formDiv.classList = "formdiv grid__row";
+    formDiv.id = "formdiv";
     formDiv.style.height = "100vh";
     formDiv.style.backgroundColor = "white"; 
     formDiv.style.width = "100vw";
@@ -93,14 +106,7 @@ function createformDiv (element){
     return true
 }
 
-// removes form div when X is clicked
-if(createformDiv){
-    const closeform = document.querySelector("#close_form");
-    closeform.addEventListener('click',e =>{
-        body.style.overflow = "auto"
-        main.removeChild(main.lastElementChild);
-    })
-}
+
 
 /**************
  * COUNTRY API FOR FORM
